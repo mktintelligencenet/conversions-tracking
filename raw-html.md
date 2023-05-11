@@ -1,6 +1,6 @@
-# How to use Hubzity tracking with stages
+# How to use MktIntelligence tracking with stages
 
-Hubzity provides tracking code that can report to the campaign post-click events. These events can represent different stages of a sales funnel, different event on a page and so on.
+MktIntelligence provides tracking code that can report to the campaign post-click events. These events can represent different stages of a sales funnel, different event on a page and so on.
 Notice for these examples you need to include the JQuery:
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 
@@ -11,7 +11,7 @@ Just paste the following code in your html header:
 
 ```html
 <script type="text/javascript">
-/* Hubzity tracking code start */
+/* MktIntelligence tracking code start */
 (function() {
     "use strict";
 
@@ -27,12 +27,12 @@ Just paste the following code in your html header:
     });
 
     trackingScript.addEventListener("error", function () {
-        console.log('Failed to load Hubzity tracking SDK');
+        console.log('Failed to load MktIntelligence tracking SDK');
     });
 
     head.appendChild(trackingScript);
 })();
-/* Hubzity tracking code end */
+/* MktIntelligence tracking code end */
 </script>
 ```
 
@@ -69,10 +69,10 @@ HTML:
 JS
 ```js
 $('.btn-subscribe').on('click', function() {
-    /* Hubzity conversion stage tracking start */
+    /* MktIntelligence conversion stage tracking start */
     var CONVERSION_STAGE = "2";
     window.trackingConversion(CONVERSION_STAGE);
-    /* Hubzity conversion stage tracking end */
+    /* MktIntelligence conversion stage tracking end */
 });
 ```
 
@@ -86,13 +86,13 @@ HTML:
 JS:
 ```js
 $('.link-subscribe').on('click', function(e) {
-    /* Hubzity conversion stage tracking start */
+    /* MktIntelligence conversion stage tracking start */
     e.preventDefault();
     var CONVERSION_STAGE = "2";
     window.trackingConversion(CONVERSION_STAGE, false, function() {
         document.location = e.target.href;
     });
-    /* Hubzity conversion stage tracking end */
+    /* MktIntelligence conversion stage tracking end */
 });
 ```
 
